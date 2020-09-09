@@ -6,9 +6,8 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+    - '!master' # We want to exclude master, because this will forcefully push changes, we don't want to forcefully push to master.
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,4 +34,4 @@ jobs:
           git config user.email vs-intellicode@github.com
           git add .
           git commit -m "Generating ZipFiles"
-          
+          git push
