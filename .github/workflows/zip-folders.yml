@@ -2,11 +2,11 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run. Triggers the workflow on push for all branches except master branch.
 on:
   push:
     branches:
+    - '**'      # matches every branch
     - '!master' # We want to exclude master, because this will forcefully push changes, we don't want to forcefully push to master.
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -30,8 +30,8 @@ jobs:
         run: npm run zip-folders
       - name: Add Zip Files to Commit and push
         run: |
-          git config user.name vs-intellicode
-          git config user.email vs-intellicode@github.com
+          git config user.name osobeso
+          git config user.email osobeso@github.com
           git add .
           git commit -m "Generating ZipFiles"
           git push
