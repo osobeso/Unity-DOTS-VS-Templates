@@ -30,7 +30,7 @@ jobs:
       - name: Run zip folder generation.
         run: npm run zip-folders
       - name: Add Zip Files to Commit and push
-      - run: | 
+        run: |
           git config user.name vs-intellicode
           git config user.email vs-intellicode@github.com
           git add .
