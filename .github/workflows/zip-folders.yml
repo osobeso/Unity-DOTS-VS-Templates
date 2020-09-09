@@ -30,8 +30,12 @@ jobs:
         run: npm run zip-folders
       - name: Add Zip Files to Commit and push
         run: |
-          git config user.name osobeso
-          git config user.email osobeso@github.com
-          git add .
-          git commit -m "Generating ZipFiles"
-          git push
+          if [ -z "$(git status --porcelain)" ]; then 
+            # Do nothing.
+          else 
+            git config user.name osobeso
+            git config user.email osobeso@github.com
+            git add .
+            git commit -m "Generating ZipFiles"
+            git push
+          fi
