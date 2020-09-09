@@ -22,10 +22,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/setup-node@v1.4.3
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: npm install
         run: npm i
       # Runs a single command using the runners shell
       - name: Run zip folder generation.
         run: npm run zip-folders
-      - name: Add new folders to commit.
-        run: git add templates
+      - uses: pre-commit/action@v2.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
