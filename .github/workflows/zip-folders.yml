@@ -35,5 +35,4 @@ jobs:
           git config user.email vs-intellicode@github.com
           git add .
           git commit -m "Generating ZipFiles"
-          git push origin ${{ github.ref }}
           
