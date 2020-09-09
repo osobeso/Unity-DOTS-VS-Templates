@@ -20,7 +20,6 @@ for(let i = 0; i < folders.length; i++) {
     if (fs.existsSync(finalZipOutput)){
         fs.rmdirSync(finalZipOutput);
     }
-
     var zippedFolder = zip.folder(folderTozip);
     zippedFolder.generateNodeStream({type:"nodebuffer", streamFiles: "true"})
     .pipe(fs.createWriteStream(finalZipOutput))
