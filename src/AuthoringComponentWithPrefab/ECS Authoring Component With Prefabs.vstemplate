@@ -1,0 +1,19 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>AuthoringComponentWithPrefabs.cs</DefaultName>
+    <Name>ECS Authoring Component with Prefabs</Name>
+    <Description>An Authoring Component template that also creates prefabs of GameObjects added to the monobehaviour.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>ECS AuthoringComponent With Prefabs.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Unity.Entities</Assembly>
+        <Assembly>UnityEngine</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">AuthoringComponentWithPrefabs.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

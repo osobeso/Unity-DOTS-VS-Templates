@@ -1,0 +1,31 @@
+{
+  "name": "unity-dots-vs-templates",
+  "version": "1.0.0",
+  "description": "A collection of Packages used for unity dots on visual studio.",
+  "main": "zips.ts",
+  "scripts": {
+    "zip-folders": "node ./zip.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osobeso/unity-ecs-vs-templates.git"
+  },
+  "keywords": [
+    "Unity",
+    "DOTS",
+    "ECS",
+    "VisualStudio"
+  ],
+  "author": "osobeso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osobeso/unity-ecs-vs-templates/issues"
+  },
+  "homepage": "https://github.com/osobeso/unity-ecs-vs-templates#readme",
+  "dependencies": {
+    "jszip": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.4"
+  }
+}
