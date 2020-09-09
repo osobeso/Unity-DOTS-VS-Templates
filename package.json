@@ -2,7 +2,7 @@
   "name": "unity-dots-vs-templates",
   "version": "1.0.0",
   "description": "A collection of Packages used for unity dots on visual studio.",
-  "main": "zips.ts",
+  "main": "zips.js",
   "scripts": {
     "zip-folders": "node ./zip.js"
   },
