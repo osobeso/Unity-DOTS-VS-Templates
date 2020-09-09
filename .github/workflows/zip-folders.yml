@@ -2,18 +2,17 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run. Triggers the workflow on push for all branches except master branch.
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+    - '**'      # matches every branch
+    - '!master' # We want to exclude master, because this will forcefully push changes, we don't want to forcefully push to master.
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  pre-commit:
+  job:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -21,7 +20,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/setup-node@v1.4.3
-
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: npm install
+        run: npm i
       # Runs a single command using the runners shell
       - name: Run zip folder generation.
         run: npm run zip-folders
+      - name: Add Zip Files to Commit and push
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then 
+            git status
+          else 
+            git config user.name osobeso
+            git config user.email osobeso@github.com
+            git add .
+            git commit -m "Generating ZipFiles"
+            git push
+          fi
