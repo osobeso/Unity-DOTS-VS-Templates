@@ -29,8 +29,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run zip folder generation.
         run: npm run zip-folders
-      - uses: actions/checkout@v2
+      - name: Add Zip Files to Commit and push
       - run: | 
+          git config user.name vs-intellicode
+          git config user.email vs-intellicode@github.com
           git add .
           git commit -m "Generating ZipFiles"
           git push
