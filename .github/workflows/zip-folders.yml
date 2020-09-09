@@ -27,3 +27,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run zip folder generation.
         run: npm run zip-folders
+      - name: Add new folders to commit.
+        run: git add templates
