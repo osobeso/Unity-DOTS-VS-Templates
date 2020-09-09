@@ -31,7 +31,7 @@ jobs:
       - name: Add Zip Files to Commit and push
         run: |
           if [ -z "$(git status --porcelain)" ]; then 
-            # Do nothing.
+            git status
           else 
             git config user.name osobeso
             git config user.email osobeso@github.com
