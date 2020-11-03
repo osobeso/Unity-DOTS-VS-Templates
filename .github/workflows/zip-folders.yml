@@ -2,6 +2,7 @@
 
 name: CI
 # Trigger Again with this user account.
+# Test Pull Request.
 # Controls when the action will run. Triggers the workflow on push for all branches except master branch.
 on:
   push:
