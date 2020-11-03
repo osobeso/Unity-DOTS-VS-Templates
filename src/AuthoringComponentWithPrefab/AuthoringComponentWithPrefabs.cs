@@ -5,7 +5,6 @@ using System.Collections.Generic;
 namespace $rootnamespace$
 {
     [DisallowMultipleComponent]
-    [RequiresEntityConversion]
     public class $safeitemname$ : MonoBehaviour, IConvertGameObjectToEntity, IDeclareReferencedPrefabs
     {
         [SerializeField]
