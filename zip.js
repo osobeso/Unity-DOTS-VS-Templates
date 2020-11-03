@@ -20,7 +20,7 @@ for(let i = 0; i < folders.length; i++) {
 
     if (fs.existsSync(finalZipOutput)){
         try{
-            fs.rmdirSync(finalZipOutput);
+            fs.rmdirSync(finalZipOutput, { recursive: true });
         }
         catch(error){
             console.log(`Could not delete file ${finalZipOutput}. Skipping file deletion.`);
