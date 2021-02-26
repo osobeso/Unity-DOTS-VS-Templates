@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Entities For Each Parallel Snippet.</Title>
+            <Author>oobeso</Author>
+            <Description>Creates a system base Entities ForEach snippet.</Description>
+            <Shortcut>eforeachp</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[Entities.ForEach((Entity e, int nativeThreadIndex, ref $Component$ data) =>
+                {
+				           
+                }).ScheduleParallel();]]>
+            </Code>
+            <Declarations>
+                <Object>
+                    <ID>Component</ID>
+                    <Type>IComponentData</Type>
+                    <ToolTip>Any element that inherits from IComponentData</ToolTip>
+                    <Default>Translation</Default>
+                </Object>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

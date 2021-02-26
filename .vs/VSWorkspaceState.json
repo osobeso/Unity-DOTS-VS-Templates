@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Templates",
+    "\\src\\Templates\\BufferElementData",
+    "\\src\\Templates\\ComponentData",
+    "\\src\\Templates\\ComponentSystemGroup",
+    "\\src\\Templates\\GameObjectConversion",
+    "\\src\\Templates\\ScriptableObject",
+    "\\src\\Templates\\SystemBase",
+    "\\src\\Templates\\SystemBaseEntityCommandBuffer"
+  ],
+  "SelectedNode": "\\.gitignore",
+  "PreviewInSolutionExplorer": false
+}

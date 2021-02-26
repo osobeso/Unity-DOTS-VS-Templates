@@ -7,8 +7,7 @@ name: CI
 on:
   push:
     branches:
-    - '**'      # matches every branch
-    - '!master' # We want to exclude master, because this will forcefully push changes, we don't want to forcefully push to master.
+    - 'master'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,16 +26,22 @@ jobs:
       - name: npm install
         run: npm i
       # Runs a single command using the runners shell
-      - name: Run zip folder generation.
+      - name: Create Structure Folder.
         run: npm run zip-folders
-      - name: Add Zip Files to Commit and push
-        run: |
-          if [ -z "$(git status --porcelain)" ]; then 
-            git status
-          else 
-            git config user.name osobeso
-            git config user.email osobeso@github.com
-            git add .
-            git commit -m "Generating ZipFiles"
-            git push
-          fi
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+      - name: Upload zip folder to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./DOTSTemplates.zip
+          asset_name: DOTSTemplates.zip
+          asset_content_type: application/zip

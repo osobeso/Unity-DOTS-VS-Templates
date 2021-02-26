@@ -1,11 +1,11 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
-    <DefaultName>ComponentData.cs</DefaultName>
-    <Name>CSharp Component Data</Name>
-    <Description>A component data template.</Description>
+    <DefaultName>BufferElementData.cs</DefaultName>
+    <Name>DOTS Buffer Element Data</Name>
+    <Description>A buffer element data template.</Description>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>10</SortOrder>
-    <Icon>CSharp ComponentData.ico</Icon>
+    <SortOrder>2</SortOrder>
+    <Icon>UnityDots.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <References>
@@ -13,6 +13,6 @@
         <Assembly>Unity.Entities</Assembly>
       </Reference>
     </References>
-    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">ComponentData.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">BufferElementData.cs</ProjectItem>
   </TemplateContent>
 </VSTemplate>

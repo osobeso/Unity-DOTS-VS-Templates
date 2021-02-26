@@ -1,0 +1,21 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>GameObjectConversionSystem.cs</DefaultName>
+    <Name>DOTS GameObjectConversionSystem</Name>
+    <Description>A game object conversion system.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>3</SortOrder>
+    <Icon>UnityDots.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Unity.Entities</Assembly>
+      </Reference>
+	  <Reference>
+        <Assembly>Unity.Collections</Assembly>
+	  </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">GameObjectConversionSystem.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,18 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>ComponentData.cs</DefaultName>
+    <Name>DOTS Component Data</Name>
+    <Description>A component data template.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>1</SortOrder>
+    <Icon>UnityDots.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Unity.Entities</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">ComponentData.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

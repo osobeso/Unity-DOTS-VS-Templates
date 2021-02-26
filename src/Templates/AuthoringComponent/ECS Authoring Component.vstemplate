@@ -1,18 +1,20 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
     <DefaultName>AuthoringComponent.cs</DefaultName>
-    <Name>ECS Authoring Component</Name>
+    <Name>DOTS Authoring Component</Name>
     <Description>An Authoring Component template.</Description>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>10</SortOrder>
-    <Icon>ECS AuthoringComponent.ico</Icon>
+    <SortOrder>6</SortOrder>
+    <Icon>UnityDots.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <References>
       <Reference>
         <Assembly>Unity.Entities</Assembly>
-        <Assembly>UnityEngine</Assembly>
       </Reference>
+	  <Reference>
+        <Assembly>UnityEngine</Assembly>
+	  </Reference>
     </References>
     <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">AuthoringComponent.cs</ProjectItem>
   </TemplateContent>

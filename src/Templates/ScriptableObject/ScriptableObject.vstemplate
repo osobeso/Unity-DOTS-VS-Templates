@@ -5,7 +5,7 @@
     <Description>An Scriptable Object template.</Description>
     <ProjectType>CSharp</ProjectType>
     <SortOrder>10</SortOrder>
-    <Icon>ScriptableObject.ico</Icon>
+    <Icon>UnityDots.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <References>

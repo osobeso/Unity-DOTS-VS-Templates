@@ -1,11 +1,11 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
-    <DefaultName>SystemBase.cs</DefaultName>
-    <Name>CSharp Component System</Name>
-    <Description>A system base template.</Description>
+    <DefaultName>ComponentSystemGroup.cs</DefaultName>
+    <Name>DOTS Component System Group</Name>
+    <Description>A Component system group.</Description>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>10</SortOrder>
-    <Icon>CSharp SystemBase.ico</Icon>
+    <SortOrder>3</SortOrder>
+    <Icon>UnityDots.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <References>
@@ -13,6 +13,6 @@
         <Assembly>Unity.Entities</Assembly>
       </Reference>
     </References>
-    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">SystemBase.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">ComponentSystemGroup.cs</ProjectItem>
   </TemplateContent>
 </VSTemplate>

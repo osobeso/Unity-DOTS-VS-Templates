@@ -1,17 +1,20 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
     <DefaultName>SystemBaseECB.cs</DefaultName>
-    <Name>CSharp Component System with Entity Command Buffer</Name>
+    <Name>DOTS System with Command Buffer (SystemBase)</Name>
     <Description>A system base template with entity command buffer injection.</Description>
     <ProjectType>CSharp</ProjectType>
-    <SortOrder>10</SortOrder>
-    <Icon>CSharp SystemBaseECB.ico</Icon>
+    <SortOrder>5</SortOrder>
+    <Icon>UnityDots.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <References>
       <Reference>
         <Assembly>Unity.Entities</Assembly>
       </Reference>
+	  <Reference>
+        <Assembly>Unity.Collections</Assembly>
+	  </Reference>
     </References>
     <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">SystemBaseECB.cs</ProjectItem>
   </TemplateContent>
