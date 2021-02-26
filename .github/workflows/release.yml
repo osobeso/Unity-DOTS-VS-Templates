@@ -28,14 +28,19 @@ jobs:
       # Runs a single command using the runners shell
       - name: Create Structure Folder.
         run: npm run zip-folders
+      - name: Stamp package json
+        id: nbgv
+        uses: dotnet/nbgv@v0.4.0
+        with:
+          stamp: package.json
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ steps.nbgv.outputs.SemVer2 }}
+          release_name: Release ${{ steps.nbgv.outputs.SemVer2 }}
       - name: Upload zip folder to release
         uses: actions/upload-release-asset@v1
         env:
