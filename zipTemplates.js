@@ -5,7 +5,7 @@ const archiver = require('archiver');
 const srcFolder = path.join(__dirname, "src/Templates");
 const snippetsSrcFolder = path.join(__dirname, "src/Snippets");
 const outDir = path.join(__dirname, "Visual Studio 2019", "Templates", "ItemTemplates", "Visual C#");
-const codeSnippetsOutdir = path.join(__dirname, "Visual Studio 2019", "Code Snippets", "Visual C#", "DOTS");
+const codeSnippetsOutdir = path.join(__dirname, "Visual Studio 2019", "Code Snippets", "Visual C#", "My Code Snippets");
 const absOutFolder = path.join(__dirname, "Visual Studio 2019");
 const absOutfile = path.join(__dirname, "DOTSTemplates.zip");
 
