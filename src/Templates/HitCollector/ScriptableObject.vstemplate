@@ -1,0 +1,21 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>GenericHitCollector.cs</DefaultName>
+    <Name>DOTS Physics Hit Collector (Generic)</Name>
+    <Description>A Generic Hit collector template for collision detection.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>UnityDots.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Unity.Entities</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Unity.Physics</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">GenericHitCollector.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
