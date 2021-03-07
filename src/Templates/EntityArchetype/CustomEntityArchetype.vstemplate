@@ -9,9 +9,12 @@
   </TemplateData>
   <TemplateContent>
     <References>
-      <Reference>
-        <Assembly>Unity.Transforms</Assembly>
+	  <Reference>
+        <Assembly>Unity.Entities</Assembly>
       </Reference>
+	  <Reference>
+	    <Assembly>Unity.Transforms</Assembly>
+	  </Reference>
     </References>
     <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">CustomEntityArchetype.cs</ProjectItem>
   </TemplateContent>

@@ -1,4 +1,5 @@
-﻿using Unity.Transforms
+﻿using Unity.Entities;
+using Unity.Transforms;
 
 namespace $rootnamespace$
 {
