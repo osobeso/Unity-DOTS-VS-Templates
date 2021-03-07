@@ -1,0 +1,18 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>CustomEntityArchetype.cs</DefaultName>
+    <Name>DOTS EntityArchetype</Name>
+    <Description>A placeholder static class to handle Entity Archetype creation.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>3</SortOrder>
+    <Icon>UnityDots.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Unity.Transforms</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">CustomEntityArchetype.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
